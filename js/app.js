@@ -721,7 +721,9 @@ async function exportPDF(){const z=Z;setZoom(100);try{await gen();await new Prom
 
 // ── autosave ──
 function save(){try{localStorage.setItem('hw3',JSON.stringify({h:ed.innerHTML,ST,V,pages}))}catch(e){}}
-try{const d=JSON.parse(localStorage.getItem('hw3')||'null');if(d){ed.innerHTML=d.h||'';ST.push(...(d.ST||[]));Object.assign(V,d.V||{});pages=d.pages||1}}catch(e){}
+// Start each app load with a fresh document. Autosave still supports recovery
+// during the current session, but a previous session is never restored.
+try{localStorage.removeItem('hw3')}catch(e){}
 if(!ed.innerHTML.trim())ed.innerHTML='<div><br></div>';
 if(V.fs&&!FM[V.fs])V.fs='kalam';
 $('bEd').onclick=()=>setView('ed');$('bPv').onclick=()=>setView('pv');$('bPdf').onclick=exportPDF;

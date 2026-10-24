@@ -8,7 +8,7 @@ The app uses plain HTML, CSS, and JavaScript. There is no build step or package 
 
 Open `index.html` in a modern desktop or mobile browser. To serve it locally instead, run any static file server from the project folder and open the address it provides. The app can also be published as a static site, such as with GitHub Pages.
 
-Some features use internet services: Google Fonts supplies the built-in typefaces, PDF export loads html2canvas and jsPDF from CDNs on demand, and handwriting recognition uses the Google Input Tools endpoint. Editing and drawing do not require a server. The browser stores the current document and settings in local storage for that browser and origin.
+Some features use internet services: Google Fonts supplies the built-in typefaces, PDF export loads html2canvas and jsPDF from CDNs on demand, and handwriting recognition uses the Google Input Tools endpoint. Editing and drawing do not require a server. The app autosaves edits in local storage during the current session. Every app start begins with a blank document; the previous session is not restored.
 
 ## Editing
 
@@ -51,7 +51,8 @@ Switch to **Preview** to review the generated pages, then use **PDF** in the hea
 
 ## Notes
 
-- Documents and settings are saved in the browser's local storage. They are not synced between browsers or devices; clearing site data removes the saved document.
+- The current document is autosaved in the browser during the session, but each app start creates a blank document. It is not synced between browsers or devices.
 - The handwriting recognition tool and external fonts require internet access. Recognition sends the drawn strokes to the Google Input Tools handwriting endpoint.
 - Only redistribute font files that you have permission to share.
+
 
