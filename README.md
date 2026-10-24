@@ -40,15 +40,15 @@ Switch to **Preview** to review the generated pages, then use **PDF** in the hea
 
 ```text
 .
-â”œâ”€â”€ index.html           # App structure and external font stylesheet
-â”œâ”€â”€ css/
-â”‚   â””â”€â”€ style.css        # Interface and page styles; bundled font declaration
-â”œâ”€â”€ js/
-â”‚   â””â”€â”€ app.js           # Editor, drawing, preview, effects, and export logic
-â”œâ”€â”€ fonts/
-â”‚   â””â”€â”€ Personal-Font.ttf
-â”œâ”€â”€ favicon.ico
-â””â”€â”€ .nojekyll            # Allows GitHub Pages to serve files as-is
+├── index.html           # App structure and external font stylesheet
+├── css/
+│   └── style.css        # Interface and page styling, including font declarations
+├── js/
+│   └── app.js           # Editor, drawing, preview, effects, and export functionality
+├── fonts/
+│   └── Personal-Font.ttf # Custom font file
+├── favicon.ico          # Website icon
+└── .nojekyll             # Prevents GitHub Pages from processing files with Jekyll
 ```
 
 ## Notes
