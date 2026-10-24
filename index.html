@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Handwriting Text Editor</title>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Shadows+Into+Light&family=Patrick+Hand&family=Indie+Flower&family=Kalam:wght@300;400;700&family=Nothing+You+Could+Do&family=Rock+Salt&family=Architects+Daughter&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <div><h1>✏️ Handwriting Text Editor</h1><small>Type • Draw • Human-looking pages</small></div>
+  <div class="vb"><button id="bEd" class="on">✍ Edit</button><button id="bPv">👁 Preview</button><button id="bPdf">🖨️ PDF</button></div>
+</header>
+<div class="tabs2" id="tabs"></div>
+<div class="rib-wrap" id="ribWrap"><div class="rib" id="rib"></div><div class="rib-grip" id="ribGrip" tabindex="0" role="separator" aria-orientation="horizontal" aria-label="Resize ribbon" title="Drag to resize ribbon"></div></div>
+<div class="ws"> 
+<div class="pr" id="prev">
+  <div class="pw" id="ew"><div class="pg" id="sheet" style="background:#fdf8ee">
+    <div id="ln"></div><div id="pgl"></div><div id="mgl"></div>
+    <canvas id="hl"></canvas>
+    <div id="ed" class="hwc" contenteditable="true" spellcheck="false"></div>
+    <canvas id="ink"></canvas>
+  </div></div>
+  <div class="status"><span>Zoom</span><button id="zo">−</button><input type="range" id="zm" min="50" max="250" value="100"><button id="zi">+</button><b id="zv">100%</b><button id="zr">Reset</button><small>Ctrl + scroll also zooms</small></div>
+</div>
+<!-- Classic (non-module) script on purpose: ES modules are blocked on file:// -->
+<script src="js/app.js"></script>
+</body>
+</html>
+
+
