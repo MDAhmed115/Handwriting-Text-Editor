@@ -8,8 +8,6 @@ The app uses plain HTML, CSS, and JavaScript. There is no build step or package 
 
 Open `index.html` in a modern desktop or mobile browser. To serve it locally instead, run any static file server from the project folder and open the address it provides. The app can also be published as a static site, such as with GitHub Pages.
 
-Or run directly using the link: https://mdahmed115.github.io/Handwriting-Text-Editor/
-
 Some features use internet services: Google Fonts supplies the built-in typefaces, PDF export loads html2canvas and jsPDF from CDNs on demand, and handwriting recognition uses the Google Input Tools endpoint. Editing and drawing do not require a server. The app autosaves edits in local storage during the current session. Every app start begins with a blank document; the previous session is not restored.
 
 ## Editing
@@ -40,15 +38,15 @@ Switch to **Preview** to review the generated pages, then use **PDF** in the hea
 
 ```text
 .
-├── index.html           # App structure and external font stylesheet
-├── css/
-│   └── style.css        # Interface and page styling, including font declarations
-├── js/
-│   └── app.js           # Editor, drawing, preview, effects, and export functionality
-├── fonts/
-│   └── Personal-Font.ttf # Custom font file
-├── favicon.ico          # Website icon
-└── .nojekyll             # Prevents GitHub Pages from processing files with Jekyll
+â”œâ”€â”€ index.html           # App structure and external font stylesheet
+â”œâ”€â”€ css/
+â”‚   â””â”€â”€ style.css        # Interface and page styles; bundled font declaration
+â”œâ”€â”€ js/
+â”‚   â””â”€â”€ app.js           # Editor, drawing, preview, effects, and export logic
+â”œâ”€â”€ fonts/
+â”‚   â””â”€â”€ Personal-Font.ttf
+â”œâ”€â”€ favicon.ico
+â””â”€â”€ .nojekyll            # Allows GitHub Pages to serve files as-is
 ```
 
 ## Notes
